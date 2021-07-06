@@ -1,0 +1,14 @@
+body {
+    background-image: url('../images/bg-pattern.svg');
+    background-repeat: no-repeat;
+}
+
+header {
+    background-image: url('../images/pattern-circles.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: toRem(15);
+    margin-top: toRem(57);
+    padding-bottom: toRem(42);
+    padding-top: toRem(41);
+}
