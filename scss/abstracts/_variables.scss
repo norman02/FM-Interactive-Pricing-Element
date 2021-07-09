@@ -1,5 +1,12 @@
 $dark-blue:hsla(227, 35%, 25%, 1);
 $lt-blue-gray: hsla(225, 20%, 60%, 1);
+$soft-violet: hsla(226, 100%, 87%, 1);
+
+$btn-bg-color: $dark-blue;
+$btn-txt-color: $soft-violet;
+
+$active-btn-color: white;
+$active-btn-bg-color: $dark-blue;
 
 $heading-txt-color: $dark-blue;
 $primary-txt-color: $lt-blue-gray;

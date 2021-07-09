@@ -1,0 +1,24 @@
+.btn {
+    background-color: $btn-bg-color;
+    border-radius: 21px;
+    color: $btn-txt-color;
+    display: inline-block;
+    font-size: toRem(12);
+    font-weight: 900;
+    padding: toRem(12) toRem(51) toRem(17) toRem(51);
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &:hover {
+        color: $active-btn-color;
+        background-color: $active-btn-bg-color;
+    }
+
+    &:focus {
+        color: $active-btn-color;
+        background-color: $active-btn-bg-color;
+        outline: none;
+    }
+}
