@@ -1,71 +1,115 @@
 $slider-width: toRem(279);
+$slider-height: toRem(8);
+$slider-shadow: none;
+$slider-bg-color: hsla(224, 65%, 95%, 1);
+$slider-fill-color: hsla(174, 77%, 80%, 1);
+$slider-radius: 5px;
+$slider-border: none;
 
-/* Reset Slider */
+$thumb-shadow: 0px 15px 30px hsla(174, 100%, 50%, 0.6);
+$thumb-border: none;
+$thumb-height: 40px;
+$thumb-width: 40px;
+$thumb-radius: 100%;
+$thumb-bg-color: hsla(174, 86%, 45%, 1);
+$thumb-bg-image: url('../images/icon-slider.svg');
+$thumb-margin-top: -16px;
+
+
+
 input[type=range] {
     -webkit-appearance: none;
-    background: transparent;
     width: $slider-width;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-}
-
-input[type=range]:focus {
+  }
+  input[type=range]:focus {
     outline: none;
-}
-
-
-input[type=range]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
     width: $slider-width;
-}
-
-input[type=range]::-moz-range-thumb {
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
+    height: $slider-height;
     cursor: pointer;
-    width: $slider-width;
-}
+    box-shadow: $slider-shadow;
+    background: $slider-bg-color;
+    border-radius: $slider-radius;
+    border: $slider-border;
 
-input[type=range]::-webkit-slider-thumb {
+    
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: $thumb-shadow;
+    border: $thumb-border;
+    height: $thumb-height;
+    width: $thumb-width;
+    border-radius: $thumb-radius;
+    background: $thumb-bg-color;
+    cursor: pointer;
     -webkit-appearance: none;
-    background: #10D8C4;
-    background-image: url('../images/icon-slider.svg');
+    margin-top: $thumb-margin-top;
+    background-image: $thumb-bg-image;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
-    box-shadow: 0px 15px 30px #00FFE799;
-    cursor: pointer;
-    height: toRem(40);
-    margin-top: toRem(-18);
-    width: toRem(40);
-}
+  }
 
-input[type=range]::-moz-range-thumb {
-    background: #10D8C4;
-    background-image: url('../images/icon-slider.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0px 15px 30px #00FFE799;
-    cursor: pointer;
-    height: toRem(40);
-    width: toRem(40);
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    background-color: #ECF0FB;
-    border-radius: 5px;
-    cursor: pointer;
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $slider-bg-color;
+  }
+  input[type=range]::-moz-range-track {
     width: $slider-width;
-    height: 8px;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track{
-    opacity: 0.5;
-}
+    height: $slider-height;
+    cursor: pointer;
+    box-shadow: $slider-shadow;
+    background: $slider-bg-color;
+    border-radius: $slider-radius;
+    border: $slider-border;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: $thumb-shadow;
+    border: $thumb-border;
+    height: $thumb-height;
+    width:$thumb-width;
+    border-radius: $thumb-radius;
+    background: $thumb-bg-color;
+    cursor: pointer;
+    background-image: $thumb-bg-image;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  input[type=range]::-ms-track {
+    width: $slider-width;
+    height: $slider-height;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: $thumb-width 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: $slider-fill-color;
+    border: $slider-border;
+    border-radius: $slider-radius;
+    box-shadow: $slider-shadow;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: $slider-bg-color;
+    border: $slider-border;
+    border-radius: $slider-radius;
+    box-shadow: $slider-shadow;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: $thumb-shadow;
+    border: $thumb-border;
+    height: $thumb-height;
+    width: $thumb-width;
+    border-radius: $thumb-radius;
+    background: $thumb-bg-color;
+    cursor: pointer;
+    background-image: $thumb-bg-image;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: $slider-fill-color;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: $slider-bg-color;
+  }
